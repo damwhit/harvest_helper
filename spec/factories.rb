@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :user do
+    user_name "MyString"
+    uid "MyString"
+    oauth_token "MyString"
+    oauth_token_secret "MyString"
+  end
   factory :plant do
     name "MyString"
     description "MyString"
