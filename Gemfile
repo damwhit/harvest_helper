@@ -11,7 +11,8 @@ gem 'figaro'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'pry-rails'
