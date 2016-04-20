@@ -1,0 +1,1 @@
+## This repository is a means to get open source vegetable gardening data out into the world.  It serves up an api with 46 vegetables and their growing information.  In addition, it hits an external api to bring in recipe data for those same vegetables.

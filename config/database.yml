@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: harvest_helper_production
-  username: harvest_helper
-  password: <%= ENV['HARVEST_HELPER_DATABASE_PASSWORD'] %>
