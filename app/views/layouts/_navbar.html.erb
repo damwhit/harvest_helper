@@ -2,6 +2,10 @@
   <span class="navbar-brand glyphicon glyphicon-camera"></span>
   <a class="navbar-brand" href="/">HaRvEsThElPeR</a>
   <ul class="pull-right nav navbar-nav">
-  <span class="navbar-brand"><%= link_to "login with facebook", facebook_login_path %></span>
+  <% if current_user %>
+    <span class="navbar-brand">Hello, <%= current_user.name %></span>
+  <% else %>
+    <span class="navbar-brand"><%= link_to "login with facebook", facebook_login_path %></span>
+  <% end %>
   </ul>
 </nav>
