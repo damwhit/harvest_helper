@@ -10,6 +10,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'pry-rails'
