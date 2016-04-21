@@ -4,6 +4,10 @@ module Api
       def index
         respond_with Plant.all
       end
+
+      def show
+        respond_with Plant.find(params[:id])
+      end
     end
   end
 end

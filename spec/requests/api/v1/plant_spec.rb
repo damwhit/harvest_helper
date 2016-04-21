@@ -1,16 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "GET /api/v1/plants" do
-  it "returns a list of all plants" do
-    include ApiHelpers
+RSpec.describe "GET /api/v1/plants/:id" do
+  it "returns information for a given plant based on id" do
     plant1 = create(:plant)
-    create(:plant, name: "test plant numero dos")
+    create(:plant, name: "plant 2")
 
-    get "/api/v1/plants"
+    get "/api/v1/plants/#{plant1.id}"
 
     expect(response.status).to eq(200)
-    plant1_json = json_body[0]
-    expect(plant1_json).to eq({:id=>plant1.id,
+    expect(json_body).to eq({
+      :id=>plant1.id,
       :name=>plant1.name,
       :description=>"oh so guud",
       :optimal_sun=>"full",
