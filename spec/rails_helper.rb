@@ -8,6 +8,8 @@ require 'rspec/rails'
 require 'webmock'
 require 'vcr'
 
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock

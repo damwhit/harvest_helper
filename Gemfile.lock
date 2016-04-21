@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: f0fa74328fc3ebb250efa5dd413a869cf34fb4c1
+  specs:
+    active_model_serializers (0.10.0.rc5)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -177,6 +186,8 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    responders (2.1.2)
+      railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -251,6 +262,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   aws-sdk (< 2.0)
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
@@ -267,6 +279,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.5.1)
   rails_12factor
+  responders (~> 2.0)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
