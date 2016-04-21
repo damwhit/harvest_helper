@@ -1,11 +1,11 @@
-<nav class="navbar navbar-default" role="navigation">
-  <span class="navbar-brand glyphicon glyphicon-camera"></span>
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top" role="navigation">
+  <a class="navbar-brand glyphicon glyphicon-leaf" href="/"></a>
   <a class="navbar-brand" href="/">HaRvEsThElPeR</a>
   <ul class="pull-right nav navbar-nav">
   <% if current_user %>
-    <span class="navbar-brand">Hello, <%= current_user.name %></span>
+    <a id="logout" class="right-nav navbar-brand glyphicon glyphicon-log-out" data-method="delete" href="/logout" ></a>
   <% else %>
-    <span class="navbar-brand"><%= link_to "login with facebook", facebook_login_path %></span>
+    <a id="login" class="right-nav navbar-brand glyphicon glyphicon-log-in" href="/auth/facebook" ></a>
   <% end %>
   </ul>
 </nav>
