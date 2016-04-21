@@ -1,0 +1,24 @@
+<div class="contatiner">
+  <article class="col-md-6 col-md-offset-3 article">
+    <% @plants.each do |plant| %>
+      <header>
+        <table class="table-responsive feed">
+          <tr>
+            <td>
+              <h1> <%= plant.name %> </h1>
+            </td>
+            <td>
+              <h3 class="media-text"><%= plant.description %></h3>
+            </td>
+            <td>
+              <%= image_tag plant.image(:medium) %>
+            </td>
+          </tr>
+        </table>
+      </header>
+      <div class="">
+      </div>
+      <div class="feed">
+      <% end %>
+    </article>
+</div>
