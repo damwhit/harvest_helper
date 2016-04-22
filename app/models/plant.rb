@@ -1,4 +1,13 @@
 class Plant < ActiveRecord::Base
+  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true
+  validates :optimal_sun, presence: true
+  validates :optimal_soil, presence: true
+  validates :when_to_plant, presence: true
+  validates :growing_from_seed, presence: true
+  validates :transplanting, presence: true
+  validates :spacing, presence: true
+  validates :watering, presence: true
   # This method associates the attribute ":image" with a file attachment
   has_attached_file :image, styles: {
     thumb: '100x100>',
