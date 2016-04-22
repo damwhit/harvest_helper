@@ -2,7 +2,9 @@
   <div class="container centerDiv">
     <h4 class="garden-search">What do you want to grow?</h4><br>
     <div class="search-bar">
-      <input type="text" name="search" id='search'>
+      <%= form_tag(plants_path, method: "post") do %>
+        <%= text_field_tag(:search) %>
+      <% end %>
       <a id='search-results' class="text-align-center"></a>
     </div>
   </div>
