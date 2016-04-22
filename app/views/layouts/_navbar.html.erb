@@ -1,6 +1,9 @@
-<nav class="navbar navbar-default custom-navbar navbar-fixed-top" role="navigation">
-  <a class="navbar-brand glyphicon glyphicon-leaf" href="/"></a>
-  <a class="navbar-brand" href="/">HaRvEsThElPeR</a>
+<nav class="navbar navbar-default navbar-collapse navbar-fixed-top" role="navigation">
+  <% if current_user %>
+    <a class="navbar-brand glyphicon glyphicon-leaf" href="/plants"></a>
+  <% else %>
+    <a class="navbar-brand glyphicon glyphicon-leaf" href="/"></a>
+  <% end %>
   <ul class="pull-right nav navbar-nav">
   <% if current_user %>
     <a id="logout" class="right-nav navbar-brand glyphicon glyphicon-log-out" data-method="delete" href="/logout" ></a>

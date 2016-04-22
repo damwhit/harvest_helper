@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/auth/facebook', as: :facebook_login
   get '/auth/facebook/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: :logout
-  resources :plants, only: [:index]
+  resources :plants, only: [:index, :show]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do

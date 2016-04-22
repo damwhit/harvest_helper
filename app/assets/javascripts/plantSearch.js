@@ -2,9 +2,7 @@ var input = $('#search')
 
 function render(htmlField, plant) {
   var markup = [
-  '<h1>' + plant.name + '</h1>',
-  '<h3 class="media-text">' + plant.description + '</h3>',
-  '<img' + plant.image + '/>',
+  '<h5><a class="plant-link" href="/plants/'+ plant.id + '">' + plant.name + '</a></h5>',
 ];
 
 return htmlField.append(markup);
