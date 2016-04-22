@@ -1,24 +1,65 @@
+$font-stack:    Helvetica, sans-serif;
+
+// navbar
 .right-nav {
   margin-right: 20px;
   padding-bottom: 30px;
 }
 
+//flash
+.alert{
+  padding-top: 100px;
+}
+
+// home screen
 .image-back {
   background-image: url('https://images.unsplash.com/photo-1430141954097-9d3abfe6147a?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 905px;
+  height: 800px;
   margin-top: 0px;
 }
 
-.article {
-  border: 0.3px solid black;
-  padding-top: 10px;
-  margin-bottom: 20px;
+// plants index
+.centerDiv{
+  padding:10px;
+  height:50px;
+  position:absolute;
+  margin-top:-25px;
+  margin-left:-100px;
+  top:30%;
+  left:50%;
 }
 
-.feed {
-  width: 100%;
+// login with facebook button
+.login{
+  padding:10px;
+  height:50px;
+  position:absolute;
+  margin-top:-25px;
+  margin-left:-120px;
+  top:30%;
+  left:50%;
+}
+
+//search links
+.plant-link{
+  color: white;
+}
+
+//search header
+.garden-search{
+  color: white;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.search-bar{
+  padding-left: 10px;
+}
+
+.plant{
+  padding-top: 100px;
 }
