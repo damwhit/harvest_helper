@@ -1,3 +1,61 @@
 <div class="container-fluid plant">
-  <h1> <%= @plant.name %> </h1>
+  <h1 class="plant-text"> <%= @plant.name %> </h1>
+  <p class="plant-text"> <%= @plant.description %> </p>
+  <p> <%= image_tag @plant.image(:medium), class:"plant-image" %> </p>
+  <table class="table table-bordered">
+    <tr>
+      <th class="plant-text">optimal_sun</th>
+      <th class="plant-text">optimal_soil</th>
+    </tr>
+    <tr class="table table-success">
+      <td class="plant-text"> <%= @plant.optimal_sun %> </td>
+      <td class="plant-text"> <%= @plant.optimal_soil %> </td>
+    </tr>
+  </table>
+  <h4 class="plant-text">planting considerations:</h4>
+  <p class="plant-text">
+    <%= @plant.planting_considerations %>
+  </p>
+  <h4 class="plant-text">when to plant:</h4>
+  <p class="plant-text">
+    <%= @plant.when_to_plant %>
+  </p>
+  <h4 class="plant-text">growing from seed:</h4>
+  <p class="plant-text">
+    <%= @plant.growing_from_seed %>
+  </p>
+  <h4 class="plant-text">transplanting:</h4>
+  <p class="plant-text">
+    <%= @plant.transplanting %>
+  <h4 class="plant-text">spacing:</h4>
+  <p class="plant-text">
+    <%= @plant.spacing %>
+  <h4 class="plant-text">watering:</h4>
+  <p class="plant-text">
+    <%= @plant.watering %>
+  </p>
+  <h4 class="plant-text">feeding:</h4>
+  <p class="plant-text">
+    <%= @plant.feeding %>
+  </p>
+  <h4 class="plant-text">other care:</h4>
+  <p class="plant-text">
+    <%= @plant.other_care %>
+  </p>
+  <h4 class="plant-text">diseases:</h4>
+  <p class="plant-text">
+    <%= @plant.diseases %>
+  </p>
+  <h4 class="plant-text">pests:</h4>
+  <p class="plant-text">
+    <%= @plant.pests %>
+  </p>
+  <h4 class="plant-text">harvesting:</h4>
+  <p class="plant-text">
+    <%= @plant.harvesting %>
+  </p>
+  <h4 class="plant-text">storage and use:</h4>
+  <p class="plant-text">
+    <%= @plant.storage_use %>
+  </p>
 </div>
