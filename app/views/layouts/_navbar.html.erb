@@ -1,8 +1,8 @@
 <nav class="navbar navbar-default navbar-collapse navbar-fixed-top" role="navigation">
   <% if current_user %>
-    <a class="navbar-brand glyphicon glyphicon-leaf" href="/plants"></a>
+    <%= link_to image_tag("plant-icon.png", class:"logo-img"), plants_path %>
   <% else %>
-    <a class="navbar-brand glyphicon glyphicon-leaf" href="/"></a>
+  <%= link_to image_tag("plant-icon.png", class:"logo-img"), root_path %>
   <% end %>
   <ul class="pull-right nav navbar-nav">
   <% if current_user %>

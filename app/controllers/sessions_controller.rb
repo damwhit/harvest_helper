@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     if user = User.from_omniauth(request.env["omniauth.auth"])
       session[:user_id] = user.id
     end
-    flash[:info] = "Welcome to hArVeStHeLpEr #{current_user.name}"
+    flash[:info] = "Hi #{current_user.name} 👋"
     redirect_to plants_path
   end
 
