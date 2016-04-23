@@ -13,6 +13,11 @@ class PlantsController < ApplicationController
 
   def create
     plant = Plant.find_by("LOWER(name) LIKE ?", "%#{params[:search]}%")
-    redirect_to plant_path(plant)
+    if !plant.nil?
+      redirect_to plant_path(plant)
+    else
+      flash.now[:alert] = "Sorry, couldn't find that plant.  Search again."
+      render :index
+    end
   end
 end

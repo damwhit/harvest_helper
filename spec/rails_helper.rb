@@ -11,6 +11,7 @@ require 'vcr'
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 VCR.configure do |c|
+  c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
 end
