@@ -17,11 +17,11 @@ RSpec.feature "User sees a list of recipes for a given vegetable" do
 
         expect(current_path).to eq('/recipes')
 
-        link = "Deborah Madison's Ivory Carrot Soup with a Fine Dice of Orange Carrots"
+        link = "Carrots Braised in Beer and Carrot Juice"
 
         click_on(link)
 
-        path = "/recipes/Deborah%20Madison's%20Ivory%20Carrot%20Soup%20with%20a%20Fine%20Dice%20of%20Orange%20Carrots"
+        path = "/recipes/Carrots%20Braised%20in%20Beer%20and%20Carrot%20Juice"
 
         expect(current_path).to eq(path)
       end
