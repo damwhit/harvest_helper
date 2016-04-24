@@ -15,11 +15,15 @@ RSpec.feature "User sees a list of recipes for a given vegetable" do
 
         click_on "Lets cook some #{@plant.name}!"
 
-
-
         expect(current_path).to eq('/recipes')
-        expect(page).to have_content("Carrot")
 
+        link = "Deborah Madison's Ivory Carrot Soup with a Fine Dice of Orange Carrots"
+
+        click_on(link)
+
+        path = "/recipes/Deborah%20Madison's%20Ivory%20Carrot%20Soup%20with%20a%20Fine%20Dice%20of%20Orange%20Carrots"
+
+        expect(current_path).to eq(path)
       end
     end
   end
