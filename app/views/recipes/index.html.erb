@@ -1,0 +1,6 @@
+<div class="container-fluid plant">
+  <% @recipes.each do |recipe| %>
+    <h1 class="plant-text"> <%= recipe.name %> </h1>
+    <% image_tag recipe.image, class:"plant-image" %>
+  <% end %>
+</div>
