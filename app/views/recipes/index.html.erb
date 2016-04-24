@@ -1,6 +1,12 @@
 <div class="container-fluid plant">
   <% @recipes.each do |recipe| %>
-    <h1 class="plant-text"> <%= recipe.name %> </h1>
-    <% image_tag recipe.image, class:"plant-image" %>
+  <table class="table">
+    <tr class="table table-success">
+      <td>
+        <h3 class="plant-text"> <%= link_to recipe.name, recipe_path(recipe.name, eid: recipe.id) %> </h3>
+        <%= link_to (image_tag recipe.image, class:"plant-image"), recipe_path(recipe.name, eid: recipe.id) %>
+      </td>
+    </tr>
+  </table>
   <% end %>
 </div>
