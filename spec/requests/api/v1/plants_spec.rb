@@ -21,7 +21,7 @@ RSpec.describe "GET /api/v1/plants" do
       :transplanting=>"ok",
       :spacing=>"10-12 inches apart",
       :watering=>"lots",
-      :feeding=>nil,
+      :feeding=>plant1.feeding,
       :other_care=>"weed and stoof",
       :diseases=>"yikes",
       :pests=>"bugs fa dayz",
