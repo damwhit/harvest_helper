@@ -1,4 +1,6 @@
 class Plant < ActiveRecord::Base
+  before_create :reset_attributes
+
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :optimal_sun, presence: true
@@ -17,4 +19,13 @@ class Plant < ActiveRecord::Base
     default_url: "https://s3.amazonaws.com/harvest-helper/plants/images/000/000/001/medium/01_tomato.jpg"
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+  def reset_attributes
+    self.planting_considerations = "n/a" if self.planting_considerations.nil?
+    self.feeding = "n/a" if self.feeding.nil?
+    self.other_care = "n/a" if self.other_care.nil?
+    self.diseases = "n/a" if self.diseases.nil?
+    self.harvesting = "n/a" if self.harvesting.nil?
+    self.storage_use = "n/a" if self.storage_use.nil?
+  end
 end

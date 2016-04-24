@@ -58,4 +58,8 @@
   <p class="plant-text">
     <%= @plant.storage_use %>
   </p>
+  <h4 class="plant-text">recipes:</h4>
+  <p class="plant-text">
+    <%= link_to "Lets cook some #{@plant.name}!", recipes_path(plant: @plant.name) %>
+  </p>
 </div>

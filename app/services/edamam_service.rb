@@ -3,8 +3,8 @@ class EdamamService
     @_connection = Faraday.new(url: 'https://api.edamam.com')
   end
 
-  def all(recipe_search)
-    parse(connection.get '/search', { q: recipe_search, app_id: app_id, app_key: app_key })
+  def all(plant)
+    parse(connection.get '/search', { q: plant, app_id: app_id, app_key: app_key })
   end
 
   def find(id)
