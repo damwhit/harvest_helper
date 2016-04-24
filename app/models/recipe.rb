@@ -25,8 +25,8 @@ class Recipe
     EdamamService.new
   end
 
-  def self.all(recipe_search)
-    service.all(recipe_search)[:hits].map {
+  def self.all(plant)
+    service.all(plant)[:hits].map {
       |data| Recipe.new(data[:recipe])
     }
   end
