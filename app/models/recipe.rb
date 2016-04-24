@@ -1,11 +1,24 @@
 class Recipe
   attr_reader :name,
               :image,
-              :ingredients
+              :ingredients,
+              :id,
+              :servings,
+              :tags,
+              :url,
+              :source,
+              :sourceIcon
+
   def initialize(data)
-    @name = data[:recipe][:label]
-    @image = data[:recipe][:image]
-    @ingredients = data[:recipe][:ingredientLines]
+    @name = data[:label]
+    @image = data[:image]
+    @ingredients = data[:ingredientLines]
+    @id = data[:uri]
+    @servings = data[:yield]
+    @tags = data[:healthLabels]
+    @url = data[:url]
+    @source = data[:source]
+    @sourceIcon = data[:sourceIcon]
   end
 
   def self.service
@@ -14,7 +27,11 @@ class Recipe
 
   def self.all(recipe_search)
     service.all(recipe_search)[:hits].map {
-      |recipe| Recipe.new(recipe)
+      |data| Recipe.new(data[:recipe])
     }
+  end
+
+  def self.find(id)
+    Recipe.new(service.find(id).first)
   end
 end

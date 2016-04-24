@@ -7,6 +7,10 @@ class EdamamService
     parse(connection.get '/search', { q: recipe_search, app_id: app_id, app_key: app_key })
   end
 
+  def find(id)
+    parse(connection.get '/search', { r: id, app_id: app_id, app_key: app_key })
+  end
+
   private
     def connection
       @_connection
