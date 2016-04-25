@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :station do
+    address "46250"
+    latitude 1.5
+    longitude 1.5
+  end
   factory :user do
     user_name "MyString"
     uid "MyString"
