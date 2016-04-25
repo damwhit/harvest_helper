@@ -27,5 +27,4 @@ class EdamamService
     def app_key
       ENV['EDAMAM_KEY']
     end
-
 end

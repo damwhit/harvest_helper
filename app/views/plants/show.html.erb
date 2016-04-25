@@ -20,6 +20,26 @@
   <p class="plant-text">
     <%= @plant.when_to_plant %>
   </p>
+  <h4 class="plant-text">find your frost dates:</h4>
+  <table class="table">
+    <tr>
+      <td class="frost-search col-xs-6"><br>
+        <%= form_tag('#', method: "get", class:"plant-text") do %>
+          <%= label_tag("enter zip:") %><br><br>
+          <%= text_field_tag(:zip) %>
+        <% end %>
+      </td><br><br>
+      <% if @frostdate %>
+      <td class="col-xs-6">
+        spring date: <%= @frostdate.spring %><br>
+        fall date: <%= @frostdate.fall %>
+      </td>
+      <% end %>
+    </tr>
+  </table>
+  <p class="plant-text">
+    *both fall and spring frosts are based on threshold of 32 degrees and 50% probability
+  </p>
   <h4 class="plant-text">growing from seed:</h4>
   <p class="plant-text">
     <%= @plant.growing_from_seed %>
