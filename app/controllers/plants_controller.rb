@@ -10,7 +10,8 @@ class PlantsController < ApplicationController
   def show
     @plant = Plant.find(params["id"])
     station = Station.where(address: params[:zip]).first_or_create if params[:zip]
-    @frostdate = FrostDate.find(station.latitude, station.longitude) if station
+    frostdate = FrostDate.find(station.latitude, station.longitude) if station
+    respond_with(frostdate)
   end
 
   def create

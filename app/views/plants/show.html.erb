@@ -22,20 +22,12 @@
   </p>
   <h4 class="plant-text">find your frost dates:</h4>
     <p class="frost-search">
-      <%= form_tag('#', method: "get", class:"plant-text") do %>
+      <%= form_tag('#', method: "get", class:"plant-text", id:"tag", 'data-plant' => "#{@plant.id}") do %>
         <%= label_tag("enter zip:") %><br>
-        <%= text_field_tag(:zip) %>
+        <%= text_field_tag(:zip, nil, id: "zip") %>
       <% end %>
     </p>
-    <% if @frostdate %>
-    <p class="plant-text">
-      spring date: <%= @frostdate.spring %><br>
-      fall date: <%= @frostdate.fall %>
-    </p>
-  <p class="plant-text">
-    *both fall and spring frost dates are based on threshold of 32 degrees and 50% probability
-  </p>
-  <% end %>
+    <p id='frost-search' class="text-align-center"></p>
   <h4 class="plant-text">growing from seed:</h4>
   <p class="plant-text">
     <%= @plant.growing_from_seed %>
