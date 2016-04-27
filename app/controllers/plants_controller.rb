@@ -3,7 +3,7 @@ class PlantsController < ApplicationController
 
   def index
     term = params[:term].try(:downcase)
-    plants = Plant.where("LOWER(name) LIKE ?", "%#{term}%").take(20)
+    plants = Plant.where("LOWER(name) LIKE ?", "%#{term}%").take(7)
     respond_with(plants)
   end
 
