@@ -7,7 +7,7 @@ RSpec.feature "User views their 'my garden' page" do
       @plant = create(:plant)
     end
 
-    it "should see the plant that was searched for" do
+    it "should see the plant that was searched for", js: true do
 
       visit '/plants'
 
@@ -22,7 +22,7 @@ RSpec.feature "User views their 'my garden' page" do
 
       click_on "my garden"
 
-      expect(current_path).to eq("garden/users/#{@user.id}")
+      expect(current_path).to eq("users/#{@user.id}/garden")
 
       expect(page).to have_content(@plant.name)
     end
