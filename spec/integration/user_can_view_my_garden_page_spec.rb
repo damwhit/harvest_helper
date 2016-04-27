@@ -3,26 +3,21 @@
 RSpec.feature "User views their 'my garden' page" do
   context "logged in user" do
     before do
-      @user = stub_omniauth
+      user = create(:user)
+      @current_user = stub_current_user(user)
       @plant = create(:plant)
     end
 
-    it "should see the plant that was searched for", js: true do
+    it "should see the plant that was searched for" do
+      visit "/plants/#{@plant.id}"
 
-      visit '/plants'
-
-      fill_in 'search', with: "#{@plant.name}"
-
-      find('input#search').native.send_keys(:return)
-
-      expect(current_path).to eq("/plants/#{@plant.id}")
       expect(page).to have_content("#{@plant.name}")
 
       click_on "add to my garden"
 
-      click_on "my garden"
+      visit '/mygarden'
 
-      expect(current_path).to eq("users/#{@user.id}/garden")
+      expect(current_path).to eq("/mygarden")
 
       expect(page).to have_content(@plant.name)
     end

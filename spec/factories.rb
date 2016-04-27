@@ -5,10 +5,11 @@ FactoryGirl.define do
     longitude 1.5
   end
   factory :user do
-    user_name "MyString"
+    name "MyString"
     uid "MyString"
+    email "MyString"
+    image "MyString"
     oauth_token "MyString"
-    oauth_token_secret "MyString"
   end
 
   factory :plant do

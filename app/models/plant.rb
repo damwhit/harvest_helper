@@ -1,6 +1,7 @@
 class Plant < ActiveRecord::Base
   before_create :reset_attributes
 
+  belongs_to :user
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :optimal_sun, presence: true

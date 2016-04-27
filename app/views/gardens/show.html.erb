@@ -1,0 +1,18 @@
+<div class="container-fluid plant">
+  <h3 class="plant-text">
+    <%= image_tag current_user.image, class: "img-circle"%>
+    <%= current_user.name %>'s garden
+  </h3>
+  <table class="table">
+    <% @plants.each do |plant| %>
+    <tr>
+      <td>
+        <%=link_to image_tag(plant.image(:thumb)), plant_path(plant) %>
+      </td>
+      <td>
+        <h4 class="plant-text"><%= link_to plant.name, plant_path(plant) %></h4>
+       </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
