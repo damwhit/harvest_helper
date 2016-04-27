@@ -11,6 +11,10 @@
       </td>
       <td>
         <h4 class="plant-text"><%= link_to plant.name, plant_path(plant) %></h4>
+        <div class="row garden">
+            <%= link_to "recipes", recipes_path(plant: plant.name), class:"btn btn-warning btn-xs" %>
+            <%= link_to "remove from garden", recipes_path(plant: plant.name), class:"btn btn-danger btn-xs" %>
+        </div>
        </td>
     </tr>
     <% end %>

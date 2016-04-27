@@ -2,7 +2,7 @@
   <h1 class="plant-text"> <%= @plant.name %> </h1>
   <p class="plant-text"> <%= @plant.description %> </p>
   <p> <%= image_tag @plant.image(:medium), class:"plant-image" %> </p>
-  <%= button_to "add to my garden", gardens_path, params: {plant_id: @plant.id}, class: "btn btn-success" %><br>
+  <%= button_to "add to my garden", gardens_path, params: {plant_id: @plant.id}, class: "btn btn-primary button" %><br>
   <table class="table table-bordered">
     <tr>
       <th class="plant-text">optimal_sun</th>
