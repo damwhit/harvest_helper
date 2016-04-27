@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :station do
+  factory :location do
     address "46250"
     latitude 1.5
     longitude 1.5
