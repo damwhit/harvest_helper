@@ -21,5 +21,18 @@ RSpec.feature "User views their 'my garden' page" do
 
       expect(page).to have_content(@plant.name)
     end
+
+    it "should not be able to add the same plant twice" do
+      visit "/plants/#{@plant.id}"
+
+      expect(page).to have_content("#{@plant.name}")
+
+      click_on "add to my garden"
+      expect(page).to have_content("#{@plant.name} added to garden!")
+
+      click_on "add to my garden"
+      expect(page).to have_content("heyyy that's already in your garden!")
+
+    end
   end
 end
