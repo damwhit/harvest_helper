@@ -11,10 +11,13 @@ Rails.application.routes.draw do
   resources :plants, only: [:index, :show, :create]
   resources :recipes, only: [:index, :show]
 
+  get '/developers', to: "api_keys#show", as: :developer
+  post '/developers', to: "api_keys#create", as: :developers
+
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :plants, only: [:index, :show]
+      resources :plants, only: [:index, :show, :create, :update]
     end
   end
 end

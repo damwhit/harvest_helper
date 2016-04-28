@@ -1,4 +1,5 @@
 class GardensController < ApplicationController
+  before_action :require_user
 
   def show
     @plants = current_user.plants.order(name: :asc)
