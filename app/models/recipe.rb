@@ -26,8 +26,8 @@ class Recipe
   end
 
   def self.all(plant)
-    service.all(plant)[:hits].map {
-      |data| Recipe.new(data[:recipe])
+    service.all(plant)[:hits].map { |data|
+      Recipe.new(data[:recipe])
     }
   end
 
