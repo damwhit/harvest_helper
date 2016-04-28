@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   post '/mygarden', to: "gardens#create", as: :gardens
   get '/mygarden', to: "gardens#show", as: :garden
+  delete '/mygarden', to: "gardens#destroy", as: :garden_plants
 
   resources :plants, only: [:index, :show, :create]
   resources :recipes, only: [:index, :show]

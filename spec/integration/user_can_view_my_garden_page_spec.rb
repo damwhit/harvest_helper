@@ -32,7 +32,24 @@ RSpec.feature "User views their 'my garden' page" do
 
       click_on "add to my garden"
       expect(page).to have_content("heyyy that's already in your garden!")
+    end
 
+    it "should be able to remove a plant from a garden" do
+      visit "/plants/#{@plant.id}"
+
+      expect(page).to have_content("#{@plant.name}")
+
+      click_on "add to my garden"
+
+      visit '/mygarden'
+
+      expect(current_path).to eq("/mygarden")
+
+      click_on "remove from garden"
+
+      within ".alert" do
+        expect(page).to have_content("#{@plant.name} removed from garden.")
+      end
     end
   end
 end
