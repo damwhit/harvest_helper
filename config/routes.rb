@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'home#show'
+  root to: 'plants#index'
+
+  get '/login', to: 'home#show', as: :login
   get '/auth/facebook', as: :facebook_login
   get '/auth/facebook/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: :logout
