@@ -1,0 +1,24 @@
+<div class="container plant">
+  <%= button_to "get api key", developers_path,  class: "btn btn-success button-dev" %>
+  <div class="row">
+    <% if !current_user.api_keys.empty? %>
+      <h2 class="plant-text">your api key:</h2>
+      <h3 class="plant-text"> <%= current_user.api_keys.first.api_key %> </h3>
+      <h4 class="plant-text">send your api key through the params like so:</h4>
+      <h5 class="plant-text">
+        http://harvesthelper.herokuapp.com/api/v1/plants?api_key=YourApiKey
+      </h5>
+      <h5 class="plant-text">
+        Other endpoints are:
+        <ul style="bullets"><br>
+          <p>get to:   http://harvesthelper.herokuapp.com/api/v1/plants/:plant_id?api_key=YourApiKey</p>
+          <p>post to:   http://harvesthelper.herokuapp.com/api/v1/plants?api_key=YourApiKey</p>
+          <p>put/patch to: http://harvesthelper.herokuapp.com/api/v1/plants/:plant_id?api_key=YourApiKey</p>
+        </ul>
+      </h5><br><br>
+      <p class="plant-text">
+        ***please don't be a dick and give your key to other people.  Let them sign in and get their own.  I mean I guess if they don't have facebook and can't login than it's okay to give them yours... but that's the only acceptable situation.***
+      </p>
+    <% end %>
+  </div>
+</div>

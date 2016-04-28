@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :api_key do
-    api_key "MyString"
+    api_key "0123456789ABCDEF"
     user_id nil
   end
   factory :location do
