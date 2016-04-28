@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425153306) do
+ActiveRecord::Schema.define(version: 20160427163221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "plants", force: :cascade do |t|
     t.string   "name"
@@ -39,23 +47,20 @@ ActiveRecord::Schema.define(version: 20160425153306) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
   end
 
-  create_table "stations", force: :cascade do |t|
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index "plants", ["user_id"], name: "index_plants_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "uid"
     t.string   "name"
     t.string   "email"
     t.string   "oauth_token"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "plants", "users"
 end

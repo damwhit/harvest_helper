@@ -6,7 +6,9 @@
   text-align: center;
   font-family: monospace;
 }
-
+.bold {
+  font-weight: bold;
+}
 .ingredient{
   font-family: monospace;
 }
@@ -18,4 +20,12 @@
 
 .recipe{
   float: right;
+}
+
+.button {
+  background-color: white;
+  color: #006dcc;
+  font-family: monospace;
+  display: block;
+  margin: auto;
 }

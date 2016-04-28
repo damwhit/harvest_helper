@@ -108,15 +108,18 @@ def stub_omniauth
   OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
     provider: 'facebook',
     uid: "1234",
-    extra: {
-      raw_info: {
-        name: "Horace",
-        email: "worace@pizza.com",
-      }
+    info: {
+      name: "Horace",
+      email: "worace@pizza.com",
+      image: "image"
     },
     credentials: {
       token: "pizza",
       secret: "secretpizza"
     }
   })
+end
+
+def stub_current_user(user)
+  allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 end
