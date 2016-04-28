@@ -14,9 +14,14 @@ module Api
         respond_with Plant.create(plant_params)
       end
 
+      def update
+        respond_with Plant.find(params[:id]).update(plant_params)
+      end
+
       private
         def plant_params
-          params.permit(:name,
+          params.permit(:id,
+                        :name,
                         :description,
                         :optimal_sun,
                         :optimal_soil,
