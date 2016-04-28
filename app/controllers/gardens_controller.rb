@@ -12,7 +12,7 @@ class GardensController < ApplicationController
       flash[:info] = "#{plant.name} added to #{ActionController::Base.helpers.link_to 'garden', garden_path}!"
       redirect_to plant_path(plant)
     else
-      flash[:alert] = "heyyy that's already in your garden!"
+      flash[:alert] = "heyyy that's already in your #{ActionController::Base.helpers.link_to 'garden', garden_path}!"
       redirect_to plant_path(plant)
     end
   end
