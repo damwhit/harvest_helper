@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates :uid, presence: true
   validates :name, presence: true
   validates :email, presence: true
+  validates :image, presence: true
   validates :oauth_token, presence: true
 
   def self.from_omniauth(auth_info)

@@ -24,8 +24,11 @@
             <li class="plant-text"><a href = "#harvesting">harvesting</a></li>
             <li class = "divider"></li>
           <% end %>
-          <li class="plant-text"><a href="/mygarden", data-method="get", id="mygarden">my garden</a></li>
-          <li class="plant-text"><a href = "/logout", data-method="delete", id="logout">logout</a></li>                </ul>
+          <% if current_user %>
+            <li class="plant-text"><a href="/mygarden", data-method="get", id="mygarden">my garden</a></li>
+            <li class="plant-text"><a href = "/logout", data-method="delete", id="logout">logout</a></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
