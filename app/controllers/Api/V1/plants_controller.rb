@@ -12,7 +12,7 @@ module Api
 
       private
 
-        def method_name
+        def restrict_access
           api_key = ApiKey.find_by(api_key: params[:api_key])
           head :unauthorized unless api_key
         end

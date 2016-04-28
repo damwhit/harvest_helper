@@ -5,8 +5,9 @@ RSpec.describe "GET /api/v1/plants" do
     include ApiHelpers
     plant1 = create(:plant)
     create(:plant, name: "test plant numero dos")
+    api_key = create(:api_key)
 
-    get "/api/v1/plants"
+    get "/api/v1/plants?api_key=#{api_key.api_key}"
 
     expect(response.status).to eq(200)
     plant1_json = json_body[0]
