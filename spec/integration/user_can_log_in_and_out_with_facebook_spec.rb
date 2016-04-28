@@ -8,7 +8,7 @@ RSpec.feature "UserLogsInWithFacebookAndLogsOut", type: :feature do
   it "should redirect to homepage after logging out" do
     visit root_path
     expect(page.status_code).to eq(200)
-    find("#login").click
+    find("a#fb-logo").click
     expect(current_path).to eq(plants_path)
     expect(page).to have_content("Horace")
     find("#logout").click
