@@ -22,12 +22,22 @@
   margin-top: -20px;
 }
 // plants index
-.centerDiv{
+.centerLoginDiv{
   padding:10px;
   height:50px;
   position:absolute;
   margin-top:-25px;
   margin-left:-100px;
+  top:30%;
+  left:50%;
+}
+
+.centerDiv{
+  padding:10px;
+  height:50px;
+  position:absolute;
+  margin-top:-25px;
+  margin-left:-145px;
   top:30%;
   left:50%;
 }
@@ -47,12 +57,10 @@
 //search header
 .garden-search{
   color: white;
-  margin-right: 30px;
-  padding-right: 30px;
 }
 
 .search-bar{
-  padding-left: 10px;
+  padding-left: 50px;
 }
 
 .frost-search{

@@ -5,8 +5,8 @@
   <%= button_to "add to my garden", gardens_path, params: {plant_id: @plant.id}, class: "btn btn-primary button" %><br>
   <table class="table table-bordered">
     <tr>
-      <th class="plant-text">optimal_sun</th>
-      <th class="plant-text">optimal_soil</th>
+      <th class="plant-text bold">optimal_sun</th>
+      <th class="plant-text bold">optimal_soil</th>
     </tr>
     <tr class="table table-success">
       <td class="plant-text"> <%= @plant.optimal_sun %> </td>
@@ -14,15 +14,15 @@
     </tr>
   </table>
   <a name="when_to_plant"></a>
-  <h4 class="plant-text">planting considerations:</h4>
+  <h4 class="plant-text bold">planting considerations:</h4>
   <p class="plant-text">
     <%= @plant.planting_considerations %>
   </p>
-  <h4 class="plant-text">when to plant:</h4>
+  <h4 class="plant-text bold">when to plant:</h4>
   <p class="plant-text">
     <%= @plant.when_to_plant %>
   </p>
-  <h4 class="plant-text">find your frost dates:</h4>
+  <h4 class="plant-text bold">find your frost dates:</h4>
     <p class="frost-search">
       <%= form_tag('#', method: "get", class:"plant-text", id:"tag", 'data-plant' => "#{@plant.id}") do %>
         <%= label_tag("enter zip:") %><br>
@@ -30,49 +30,49 @@
       <% end %>
     </p>
     <p id='frost-search' class="text-align-center"></p>
-  <h4 class="plant-text">growing from seed:</h4>
+  <h4 class="plant-text bold">growing from seed:</h4>
   <p class="plant-text">
     <%= @plant.growing_from_seed %>
   </p>
-  <h4 class="plant-text">transplanting:</h4>
+  <h4 class="plant-text bold">transplanting:</h4>
   <p class="plant-text">
     <%= @plant.transplanting %>
   </p>
-  <h4 class="plant-text">spacing:</h4>
+  <h4 class="plant-text bold">spacing:</h4>
   <p class="plant-text">
     <%= @plant.spacing %>
   </p>
   <a name="care"></a>
-  <h4 class="plant-text">watering:</h4>
+  <h4 class="plant-text bold">watering:</h4>
   <p class="plant-text">
     <%= @plant.watering %>
   </p>
-  <h4 class="plant-text">feeding:</h4>
+  <h4 class="plant-text bold">feeding:</h4>
   <p class="plant-text">
     <%= @plant.feeding %>
   </p>
-  <h4 class="plant-text">other care:</h4>
+  <h4 class="plant-text bold">other care:</h4>
   <p class="plant-text">
     <%= @plant.other_care %>
   </p>
-  <h4 class="plant-text">diseases:</h4>
+  <h4 class="plant-text bold">diseases:</h4>
   <p class="plant-text">
     <%= @plant.diseases %>
   </p>
-  <h4 class="plant-text">pests:</h4>
+  <h4 class="plant-text bold">pests:</h4>
   <p class="plant-text">
     <%= @plant.pests %>
   </p>
   <a name="harvesting"></a>
-  <h4 class="plant-text">harvesting:</h4>
+  <h4 class="plant-text bold">harvesting:</h4>
   <p class="plant-text">
     <%= @plant.harvesting %>
   </p>
-  <h4 class="plant-text">storage and use:</h4>
+  <h4 class="plant-text bold">storage and use:</h4>
   <p class="plant-text">
     <%= @plant.storage_use %>
   </p>
-  <h4 class="plant-text">recipes:</h4>
+  <h4 class="plant-text bold">recipes:</h4>
   <p class="plant-text">
     <%= link_to "Lets cook some #{@plant.name}!", recipes_path(plant: @plant.name) %>
   </p>
