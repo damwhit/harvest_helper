@@ -18,6 +18,7 @@ gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 gem 'faraday'
 gem 'geocoder'
 gem 'newrelic_rpm'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'pry-rails'
