@@ -9,7 +9,7 @@ RSpec.describe "POST api/v1/plants" do
     post "/api/v1/plants?api_key=#{api_key.api_key}&name=canteloupe&description=guud&optimal_sun=full&optimal_soil=loamy&when_to_plant=now&growing_from_seed=ok&transplanting=aight&spacing=5in&watering=lots"
 
     expect(response.status).to eq(201)
-    expect(json_body.count).to eq(18)
+    expect(json_body.count).to eq(19)
 
     get "/api/v1/plants?api_key=#{api_key.api_key}"
 
