@@ -22,13 +22,14 @@ RSpec.describe "GET /api/v1/plants" do
       :transplanting=>"ok",
       :spacing=>"10-12 inches apart",
       :watering=>"lots",
-      :feeding=>plant1.feeding,
+      :feeding=> plant1.feeding,
       :other_care=>"weed and stoof",
       :diseases=>"yikes",
       :pests=>"bugs fa dayz",
       :harvesting=>"use ya hands",
       :storage_use=>"fridge fa days",
-      :image_file_name=>nil
+      :image_file_name=>nil,
+      :image => "https://s3.amazonaws.com/harvest-helper/plants/images/000/000/001/medium/01_tomato.jpg",
     })
   end
 end
