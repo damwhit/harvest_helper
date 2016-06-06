@@ -8,7 +8,7 @@ RSpec.describe "GET api/v1/plants" do
     get "/api/v1/plants/#{plant1.id}?api_key=#{api_key.api_key}"
 
     expect(response.status).to eq(200)
-    expect(json_body.count).to eq(19)
+    expect(json_body.count).to eq(18)
 
     expect(json_body[:name]).to eq(
       plant1.name,
@@ -20,7 +20,7 @@ RSpec.describe "GET api/v1/plants" do
 
     get "/api/v1/plants/#{plant1.id}?api_key=#{api_key.api_key}"
 
-    expect(json_body.count).to eq(19)
+    expect(json_body.count).to eq(18)
     expect(json_body[:name]).to eq(
       "newname"
       )
