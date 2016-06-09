@@ -6,6 +6,10 @@ module Api
         respond_with Plant.all
       end
 
+      def find_by
+        respond_with Plant.find_by(plant_params)
+      end
+
       def show
         respond_with Plant.find(params[:id])
       end
