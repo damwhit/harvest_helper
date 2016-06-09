@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+        get '/plants/find', to: "plants#find_by"
       resources :plants, only: [:index, :show, :create, :update]
     end
   end
