@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "GET /api/v1/recipes" do
   it "returns a list of all recipes for a given plant" do
     include ApiHelpers
-    plant1 = create(:plant)
+    plant1 = create(:plant, name: 'carrot')
     create(:plant, name: "test plant numero dos")
     api_key = create(:api_key)
 
@@ -11,24 +11,15 @@ RSpec.describe "GET /api/v1/recipes" do
 
     expect(response.status).to eq(200)
     plant1_json = json_body[0]
-    expect(plant1_json).to eq({:id=>plant1.id,
-      :name=>plant1.name,
-      :description=>"oh so guud",
-      :optimal_sun=>"full",
-      :optimal_soil=>"loamy",
-      :planting_considerations=>"lots of things to consider",
-      :when_to_plant=>"spring",
-      :growing_from_seed=>"do it",
-      :transplanting=>"ok",
-      :spacing=>"10-12 inches apart",
-      :watering=>"lots",
-      :feeding=> plant1.feeding,
-      :other_care=>"weed and stoof",
-      :diseases=>"yikes",
-      :pests=>"bugs fa dayz",
-      :harvesting=>"use ya hands",
-      :storage_use=>"fridge fa days",
-      :image => "https://s3.amazonaws.com/harvest-helper/plants/images/000/000/001/medium/01_tomato.jpg",
+    expect(plant1_json).to eq({:id => "http://www.edamam.com/ontologies/edamam.owl#recipe_be5a134c776c528ff22c664552ccb69a",
+      :image => "https://www.edamam.com/web-img/6d7/6d7c318d7a0e0b11413bbf5c4cc91583.jpg",
+      :ingredients => ["8 medium carrots", "1 cup fresh carrot juice", "1/2 cup hoppy beer, such as a pilsner", "1 teaspoon sugar", "1 tablespoon unsalted butter", "Salt"],
+      :name => "Carrots Braised in Beer and Carrot Juice",
+      :servings => 4.0,
+      :source => "Food & Wine",
+      :sourceIcon => "http://www.foodandwine.com/favicon.ico",
+      :tags => ["Vegetarian", "Egg-Free", "Peanut-Free", "Tree-Nut-Free", "Soy-Free", "Fish-Free", "Shellfish-Free"],
+      :url => "http://www.foodandwine.com/recipes/carrots-braised-in-beer-and-carrot-juice"
     })
   end
 end
