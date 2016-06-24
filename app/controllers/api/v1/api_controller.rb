@@ -7,8 +7,7 @@ module Api
 
       private
         def restrict_access
-          api_key = ApiKey.find_by(api_key: params[:api_key])
-          head :unauthorized unless api_key
+          head :unauthorized unless ApiKey.exists?(api_key: params[:api_key])
         end
     end
   end
