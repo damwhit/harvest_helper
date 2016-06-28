@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "GET /api/v1/plants/:id" do
-  it "returns information for a given plant based on id" do
+RSpec.describe "GET /api/v1/plants/find?name" do
+  it "returns information for a given plant based on name" do
     plant1 = create(:plant)
     create(:plant, name: "plant 2")
     api_key = create(:api_key)
 
-    get "/api/v1/plants/#{plant1.id}?api_key=#{api_key.api_key}"
+    get "/api/v1/plants/find?name=#{plant1.name}&api_key=#{api_key.api_key}"
 
     expect(response.status).to eq(200)
     expect(json_body).to eq({
