@@ -1,19 +1,19 @@
-#Harvest Helper
+# Harvest Helper
 
 One of my friends runs an organization in Indianapolis that manages 7 urban farms and gives produce and plant starts to the community. She said that there is often a scenario where she will give folks plant starts and provide verbal instructions on how to grow the plant but no other resource. This app is meant to be that resource. It provides growing, harvesting and recipe information for the 45 plants in the database as well as a json api so that people can hopefully use this data to build other apps.
 
 Production Hosted [here](http://harvesthelper.herokuapp.com)
 Api Information Hosted [here](http://harvesthelper.herokuapp.com/developers)
 
-#####User Workflow
+##### User Workflow
  ![user workflow](app/assets/images/workflow.gif)
  
 
-###Goals
-#####Mobile UX Design
+### Goals
+##### Mobile UX Design
 Since folks don't often take their computers into their gardens, I decided to make this app's design mobile focused.  It looks better on the phone than it does on a laptop.  Pull requests always accepted :)
 
-####Technical Overview
+#### Technical Overview
 * Full stack ruby-on-rails
 * jQuery/Ajax
 * Facebook Oauth2
