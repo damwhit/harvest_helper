@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'rails', '4.2.5.1'
+gem 'rails', '~> 4.2.10'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -11,7 +11,7 @@ gem 'figaro'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'paperclip'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk', '~> 2.3'
 gem 'omniauth-facebook'
 gem 'responders', '~> 2.0'
 gem 'active_model_serializers', github: "rails-api/active_model_serializers"

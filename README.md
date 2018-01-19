@@ -24,6 +24,9 @@ Since folks don't often take their computers into their gardens, I decided to ma
 * Paperclip
 * Testing with rspec and Capybara
 
+### Setup 
+Create databases for test and development environments
+
 ### Testing
 All testing in Harvest Helper was done via [RSpec-rails](https://github.com/rspec/rspec-rails).  I used [shoulda matchers](https://github.com/thoughtbot/shoulda-matchers) to test database validations and relationships.  Our coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
 

@@ -2,14 +2,14 @@ require 'csv'
 
 photos = []
 
-Dir.foreach(File.join Rails.root, "data/vegetable_photos/") {
+Dir.entries(File.join Rails.root, "data/vegetable_photos/").sort.each {
   |file_name| photos << file_name
 }
 
-plant = File.join Rails.root, "data/garden_vegetables.csv"
+plants = File.join Rails.root, "data/garden_vegetables.csv"
 
 count = 2
-CSV.foreach(plant, headers: true, header_converters: :symbol) do |row|
+CSV.foreach(plants, headers: true, header_converters: :symbol) do |row|
   data = row.to_h
   record = Plant.create(data)
 
@@ -17,5 +17,5 @@ CSV.foreach(plant, headers: true, header_converters: :symbol) do |row|
 
   count += 1
 
-  puts "Created #{record.class}-#{record.id}."
+  puts "Created #{record.class} #{record.id}."
 end
