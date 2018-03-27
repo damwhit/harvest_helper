@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.2.2
+services:
+- postgresql
+script:
+  - bundle exec rake db:create db:migrate
+  - bundle exec rspec spec
+cache: bundler
+
+addons:
+  sauce_connect:
+    username: ENV['SAUCE_USERNAME']
+    access_key: ENV['SAUCE_KEY']
