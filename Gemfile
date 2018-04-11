@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'rails', '~> 4.2.10'
+gem 'rails', '~> 5.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -11,7 +11,7 @@ gem 'figaro'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk'
 gem 'omniauth-facebook'
 gem 'responders', '~> 2.0'
 gem 'active_model_serializers', require: true
@@ -19,6 +19,7 @@ gem 'faraday'
 gem 'geocoder'
 gem 'newrelic_rpm'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'bootsnap'
 
 group :development, :test do
   gem 'pry-rails'
@@ -30,12 +31,12 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'launchy'
+  gem 'listen'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'quiet_assets'
 end
 
 group :test do

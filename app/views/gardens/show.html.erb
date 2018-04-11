@@ -1,6 +1,6 @@
 <div class="container-fluid plant">
   <h3 class="plant-text">
-    <%= image_tag current_user.image, class: "img-circle"%>
+    <img class="image-circle" src=<%= current_user.image %> alt="Image of <%= current_user.name %>">
     <%= current_user.name %>'s garden
   </h3>
   <% if !current_user.plants.empty? %>
