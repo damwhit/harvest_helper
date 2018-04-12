@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'plants#index'
 
   get '/login', to: 'home#show', as: :login
