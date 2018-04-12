@@ -1,7 +1,7 @@
-class Plant < ActiveRecord::Base
+class Plant < ApplicationRecord
   before_create :reset_attributes
 
-  belongs_to :user
+  belongs_to :user, optional: true
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :optimal_sun, presence: true

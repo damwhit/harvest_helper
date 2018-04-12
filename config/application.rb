@@ -1,15 +1,18 @@
-require File.expand_path('../boot', __FILE__)
+# require File.expand_path('../boot', __FILE__)
+require_relative 'boot'
 
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
+require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
+require "action_cable/engine"
 require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -19,6 +22,7 @@ module HarvestHelper
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
+    config.load_defaults 5.0
     # -- all .rb files in that directory are automatically loaded.
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
@@ -30,23 +34,22 @@ module HarvestHelper
     # config.i18n.default_locale = :de
     # Rails 3/4
 
-    config.middleware.insert_before 0, "Rack::Cors" do
-      allow do
-        origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :options]
-      end
-    end
-
-    # Rails 5
-
-    # config.middleware.insert_before 0, Rack::Cors do
+    # config.middleware.insert_before 0, "Rack::Cors" do
     #   allow do
     #     origins '*'
     #     resource '*', :headers => :any, :methods => [:get, :post, :options]
     #   end
     # end
 
+    # Rails 5
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
   end
 end

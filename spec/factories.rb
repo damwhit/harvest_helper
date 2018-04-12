@@ -1,13 +1,16 @@
-FactoryGirl.define do
+FactoryBot.define do
+
   factory :api_key do
     api_key "0123456789ABCDEF"
     user_id nil
   end
+
   factory :location do
     address "46250"
     latitude 1.5
     longitude 1.5
   end
+
   factory :user do
     name "MyString"
     uid "MyString"
@@ -33,4 +36,5 @@ FactoryGirl.define do
     harvesting "use ya hands"
     storage_use "fridge fa days"
   end
+
 end
