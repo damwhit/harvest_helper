@@ -7,13 +7,11 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body>
-<%= render 'layouts/navbar' %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<% flash.each do |type, message| %>
-  <%= content_tag :div, sanitize(message), class: "alert alert_#{type} admin-flash" %>
-<% end %>
-<%= yield %>
-<%= javascript_include_tag 'application' %>
+  <%= render 'layouts/navbar' %>
+  <% flash.each do |type, message| %>
+    <%= content_tag :div, sanitize(message), class: "alert alert_#{type} admin-flash" %>
+  <% end %>
+  <%= yield %>
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>

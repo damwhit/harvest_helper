@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'plants#index'
 
-  get '/login', to: 'home#show', as: :login
-  get '/auth/facebook', as: :facebook_login
-  get '/auth/facebook/callback', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy', as: :logout
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
 
   post '/mygarden', to: "gardens#create", as: :gardens
   get '/mygarden', to: "gardens#show", as: :garden

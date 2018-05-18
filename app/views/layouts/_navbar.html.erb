@@ -13,20 +13,19 @@
           <%= link_to image_tag("plant-icon.png", class:"logo-img"), root_path %>
         <% end %>
       </div>
-​
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <% if request.env["PATH_INFO"].include?("/plants/") %>
             <li class="plant-text"><a href = "#when_to_plant">planting</a></li>
             <li class="plant-text"><a href = "#care">care</a></li>
             <li class="plant-text"><a href = "#harvesting">harvesting</a></li>
-            <li class = "divider"></li>
+            <li class="divider"></li>
           <% end %>
           <% if current_user %>
             <li class="plant-text"><a href="/mygarden", data-method="get", id="mygarden">my garden</a></li>
-            <li class="plant-text"><a href = "/logout", data-method="delete", id="logout">logout</a></li>
+            <li class="plant-text"><a href="/users/sign_out", data-method="delete", id="logout">logout</a></li>
           <% else %>
-            <li class="plant-text"><a href="/login", data-method="get", id="login">login with facebook</a></li>
+            <li class="plant-text"><a href="/users/sign_in", data-method="get", id="login">login</a></li>
           <% end %>
         </ul>
       </div>

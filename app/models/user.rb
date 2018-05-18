@@ -6,11 +6,8 @@ class User < ApplicationRecord
   has_many :plants
   has_many :api_keys
 
-  validates :uid, presence: true
   validates :name, presence: true
   validates :email, presence: true
-  validates :image, presence: true
-  validates :oauth_token, presence: true
 
   def self.from_omniauth(auth_info)
     where(uid: auth_info[:uid]).first_or_create do |new_user|
