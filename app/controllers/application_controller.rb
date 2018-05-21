@@ -1,14 +1,11 @@
 class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?  
   protect_from_forgery with: :exception
-  helper_method :current_user
-  respond_to :json
+  respond_to :html, :json
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
+  protected
 
-  def require_user
-    flash[:alert] = "You gotta be logged in to do that." unless current_user
-    redirect_to login_path unless current_user
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end

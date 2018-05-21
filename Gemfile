@@ -12,7 +12,6 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'omniauth-facebook'
 gem 'responders', '~> 2.0'
 gem 'active_model_serializers', require: true
 gem 'faraday'
@@ -20,6 +19,7 @@ gem 'geocoder'
 gem 'newrelic_rpm'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'bootsnap'
+gem 'devise'
 
 group :development, :test do
   gem 'pry-rails'
@@ -35,7 +35,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.5'
   gem 'spring'
 end
 

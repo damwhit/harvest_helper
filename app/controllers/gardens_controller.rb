@@ -1,6 +1,6 @@
 class GardensController < ApplicationController
-  before_action :require_user
-
+  before_action :authenticate_user!
+  
   def show
     @plants = current_user.plants.order(name: :asc)
   end
