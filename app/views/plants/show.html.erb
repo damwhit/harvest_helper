@@ -22,14 +22,6 @@
   <p class="plant-text">
     <%= @plant.when_to_plant %>
   </p>
-  <h4 class="plant-text bold">find your frost dates:</h4>
-    <p class="frost-search">
-      <%= form_tag('#', method: "get", class:"plant-text", id:"tag", 'data-plant' => "#{@plant.id}") do %>
-        <%= label_tag("enter zip:") %><br>
-        <%= text_field_tag(:zip, nil, id: "zip") %>
-      <% end %>
-    </p>
-    <p id='frost-search' class="text-align-center"></p>
   <h4 class="plant-text bold">growing from seed:</h4>
   <p class="plant-text">
     <%= @plant.growing_from_seed %>

@@ -3,7 +3,7 @@ RSpec.feature "developer can get an api key" do
   context "a logged in user is able to get one key" do
     before do
       user = create(:user)
-      @current_user = stub_current_user(user)
+      sign_in user
       @api_key = create(:api_key)
     end
 

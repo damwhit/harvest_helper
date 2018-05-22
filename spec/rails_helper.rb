@@ -89,6 +89,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include Devise::Test::IntegrationHelpers, type: :feature  
 end
 
 Shoulda::Matchers.configure do |config|
@@ -96,30 +97,5 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
-
 end
 
-
-def stub_omniauth
-  # first, set OmniAuth to run in test mode
-  OmniAuth.config.test_mode = true
-  # then, provide a set of fake oauth data that
-  # omniauth will use when a user tries to authenticate:
-  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
-    provider: 'facebook',
-    uid: "1234",
-    info: {
-      name: "Horace",
-      email: "worace@pizza.com",
-      image: "image"
-    },
-    credentials: {
-      token: "pizza",
-      secret: "secretpizza"
-    }
-  })
-end
-
-def stub_current_user(user)
-  allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-end

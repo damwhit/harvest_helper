@@ -14,7 +14,8 @@ FactoryBot.define do
   factory :user do
     name "MyString"
     uid "MyString"
-    email "MyString"
+    email "MyString@example.com"
+    password "blahblah"
     image "MyString"
     oauth_token "MyString"
   end

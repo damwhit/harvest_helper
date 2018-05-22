@@ -4,7 +4,7 @@ RSpec.feature "User views their 'my garden' page" do
   context "logged in user" do
     before do
       user = create(:user)
-      @current_user = stub_current_user(user)
+      sign_in user
       @plant = create(:plant)
     end
 
