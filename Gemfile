@@ -19,7 +19,6 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'bootsnap'
 gem 'devise'
 gem 'cloudinary'
-gem 'paperclip'
 
 group :development, :test do
   gem 'pry-rails'

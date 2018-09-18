@@ -20,7 +20,7 @@ class Plant < ApplicationRecord
     }
     response = Cloudinary::Uploader.upload(image, options)
 
-    Plant.find(self.id).update!('image_url' => response['public_id'])
+    self.update!('image_url' => response['public_id'])
   end
 
   def reset_attributes
