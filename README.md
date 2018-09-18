@@ -19,7 +19,6 @@ Since folks don't often take their computers into their gardens, I decided to ma
 * Facebook Oauth2
 * Ruby Geocoder
 * Edamam API
-* FarmSense API
 * Amazon Web Services S3 API
 * Paperclip
 * Testing with rspec and Capybara
