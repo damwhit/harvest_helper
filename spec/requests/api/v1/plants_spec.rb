@@ -28,7 +28,7 @@ RSpec.describe "GET /api/v1/plants" do
       :pests=>"bugs fa dayz",
       :harvesting=>"use ya hands",
       :storage_use=>"fridge fa days",
-      :image => "https://s3.amazonaws.com/harvest-helper/plants/images/000/000/001/medium/01_tomato.jpg",
+      :image_url => nil,
     })
   end
 end

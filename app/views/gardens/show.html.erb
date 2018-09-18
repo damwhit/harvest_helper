@@ -7,7 +7,7 @@
       <% @plants.each do |plant| %>
       <tr>
         <td>
-          <%=link_to image_tag(plant.image(:thumb)), plant_path(plant) %>
+          <%= link_to cl_image_tag(plant.image_url, :class=>'plant-image', :height=>100, :fetch_format=>:auto, :crop=>"scale"), plant_path(plant) %>
         </td>
         <td>
           <h4 class="plant-text"><%= link_to plant.name, plant_path(plant) %></h4>

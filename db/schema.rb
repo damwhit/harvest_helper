@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_12_220041) do
+ActiveRecord::Schema.define(version: 2018_09_14_154700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_04_12_220041) do
     t.index ["user_id"], name: "index_api_keys_on_user_id"
   end
 
-  create_table "locations", id: :serial, force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "address"
     t.float "latitude"
     t.float "longitude"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2018_04_12_220041) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "plants", id: :serial, force: :cascade do |t|
+  create_table "plants", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "optimal_sun"
@@ -50,15 +50,12 @@ ActiveRecord::Schema.define(version: 2018_04_12_220041) do
     t.string "storage_use"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.string "image_url"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "uid"
     t.string "name"
     t.string "email"

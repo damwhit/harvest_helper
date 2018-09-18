@@ -13,7 +13,8 @@ CSV.foreach(plants, headers: true, header_converters: :symbol) do |row|
   data = row.to_h
   record = Plant.create(data)
 
-  record.update_attributes(image: File.open("#{Rails.root}/data/vegetable_photos/#{photos[count]}"))
+
+  record.upload_image_to_cloudinary("#{Rails.root}/data/vegetable_photos/#{photos[count]}");
 
   count += 1
 

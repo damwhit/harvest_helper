@@ -10,8 +10,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'rails_12factor', group: :production
-gem 'paperclip'
-gem 'aws-sdk'
 gem 'responders', '~> 2.0'
 gem 'active_model_serializers', require: true
 gem 'faraday'
@@ -20,6 +18,7 @@ gem 'newrelic_rpm'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'bootsnap'
 gem 'devise'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'pry-rails'

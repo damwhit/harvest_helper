@@ -12,8 +12,7 @@ RSpec.describe "GET /api/v1/recipes" do
     expect(response.status).to eq(200)
     plant1_json = json_body[0]
     expect(plant1_json).to include({
-      :id => "http://www.edamam.com/ontologies/edamam.owl#recipe_2e8370a36d9a9a9bc6304c390b8bd2d0",
-      :name => "Carrot Halwa"
+      :id => "http://www.edamam.com/ontologies/edamam.owl#recipe_89f04393fac1e0bf35e6175c9b710f38",
     })
   end
 end

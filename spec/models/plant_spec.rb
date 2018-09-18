@@ -10,6 +10,5 @@ RSpec.describe Plant, type: :model do
   it { should validate_presence_of(:growing_from_seed) }
   it { should validate_presence_of(:transplanting) }
   it { should validate_presence_of(:spacing) }
-  it { should validate_presence_of(:watering) }
   it { should belong_to :user }
 end
