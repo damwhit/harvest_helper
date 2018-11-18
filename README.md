@@ -2,8 +2,8 @@
 
 One of my friends runs an organization in Indianapolis that manages 7 urban farms and gives produce and plant starts to the community. She said that there is often a scenario where she will give folks plant starts and provide verbal instructions on how to grow the plant but no other resource. This app is meant to be that resource. It provides growing, harvesting and recipe information for the 45 plants in the database as well as a json api so that people can hopefully use this data to build other apps.
 
-Production Hosted [here](http://harvesthelper.herokuapp.com)
-Api Information Hosted [here](http://harvesthelper.herokuapp.com/developers)
+Production Hosted [here](https://harvesthelper.herokuapp.com)
+Api Information Hosted [here](https://harvesthelper.herokuapp.com/developers)
 
 ##### User Workflow
  ![user workflow](app/assets/images/workflow.gif)
@@ -23,8 +23,13 @@ Since folks don't often take their computers into their gardens, I decided to ma
 * Paperclip
 * Testing with rspec and Capybara
 
-### Setup 
-Create databases for test and development environments
+### Setup
+1. Clone the repo: `git clone git@github.com:damwhit/harvest_helper.git`
+1. Navigate to the root of the project: `cd harvest_helper`
+1. Install dependencies: `bundle`
+1. Create the database: `rake db:create`
+1. Run migrations: `rake db:migrate`
+1. Start the server: `bundle exec puma`
 
 ### Testing
 All testing in Harvest Helper was done via [RSpec-rails](https://github.com/rspec/rspec-rails).  I used [shoulda matchers](https://github.com/thoughtbot/shoulda-matchers) to test database validations and relationships.  Our coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
