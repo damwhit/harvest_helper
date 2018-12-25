@@ -16,3 +16,8 @@
 /config/application.yml
 # Ignore test coverage files from SimpleCov
 /coverage
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
