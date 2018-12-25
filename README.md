@@ -27,9 +27,9 @@ Since folks don't often take their computers into their gardens, I decided to ma
 1. Clone the repo: `git clone git@github.com:damwhit/harvest_helper.git`
 1. Navigate to the root of the project: `cd harvest_helper`
 1. Install dependencies: `bundle`
-1. Create the database: `rake db:create`
-1. Run migrations: `rake db:migrate`
-1. Start the server: `bundle exec puma`
+1. Create the database: `rails db:create`
+1. Run migrations: `rails db:migrate`
+1. Start the server: `rails s`
 
 ### Testing
 All testing in Harvest Helper was done via [RSpec-rails](https://github.com/rspec/rspec-rails).  I used [shoulda matchers](https://github.com/thoughtbot/shoulda-matchers) to test database validations and relationships.  Our coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
