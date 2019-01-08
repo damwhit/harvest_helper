@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'plants#index'
-
-  post '/mygarden', to: "gardens#create", as: :gardens
-  get '/mygarden', to: "gardens#show", as: :garden
-  delete '/mygarden', to: "gardens#destroy", as: :garden_plants
-
-  resources :plants, only: [:index, :show, :create]
-  resources :recipes, only: [:index, :show]
-
-  get '/developers', to: "api_keys#show", as: :developer
-  post '/developers', to: "api_keys#create", as: :developers
-
-
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
         get '/plants/find', to: "plants#find_by"
