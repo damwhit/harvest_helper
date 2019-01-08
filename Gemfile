@@ -18,7 +18,6 @@ gem 'geocoder'
 gem 'newrelic_rpm'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'bootsnap'
-gem 'devise'
 gem 'cloudinary'
 
 group :development, :test do

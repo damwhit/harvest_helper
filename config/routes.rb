@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   root to: 'plants#index'
 
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
-
   post '/mygarden', to: "gardens#create", as: :gardens
   get '/mygarden', to: "gardens#show", as: :garden
   delete '/mygarden', to: "gardens#destroy", as: :garden_plants
