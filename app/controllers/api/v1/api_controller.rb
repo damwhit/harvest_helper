@@ -1,7 +1,6 @@
 module Api
   module V1
     class ApiController < ApplicationController
-      protect_from_forgery with: :null_session
       before_action :restrict_access
       respond_to :json
 
