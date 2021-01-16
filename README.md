@@ -7,7 +7,7 @@ Api Information Hosted [here](https://harvesthelper.herokuapp.com/developers)
 
 ##### User Workflow
  ![user workflow](app/assets/images/workflow.gif)
- 
+
 
 ### Goals
 ##### Mobile UX Design
@@ -16,7 +16,7 @@ Since folks don't often take their computers into their gardens, I decided to ma
 #### Technical Overview
 * Full stack ruby-on-rails
 * jQuery/Ajax
-* Facebook Oauth2
+* Devise Auth
 * Ruby Geocoder
 * Edamam API
 * Amazon Web Services S3 API
@@ -39,12 +39,12 @@ Once you have the repo cloned, make sure to reset the database on your local mac
 
 In order to run the tests, enter `rspec` in the command line.
 
-If you would like to run a specific test enter, the whole path of that test, preceeded by the rspec command: ie. 
+If you would like to run a specific test enter, the whole path of that test, preceeded by the rspec command: ie.
 
 ```
 rspec spec/path_to_file/file_name.rb
 ```
 
-In order to see coverage for our testing suite simply type the command `open coverage/index.html` and it will show the index page for our simple cov code coverage. 
+In order to see coverage for our testing suite simply type the command `open coverage/index.html` and it will show the index page for our simple cov code coverage.
 
 Happy testing!
