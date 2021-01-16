@@ -1,7 +1,7 @@
   require 'rails_helper'
 
 RSpec.feature "User views their 'my garden' page" do
-  context "logged in user" do
+  xcontext "logged in user" do
     before do
       user = create(:user)
       sign_in user

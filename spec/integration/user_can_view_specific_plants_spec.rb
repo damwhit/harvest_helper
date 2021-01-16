@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "User sees a specific plant" do
-  context "logged in user, when searching", :js => true do
+  xcontext "logged in user, when searching", :js => true do
     before do
       @user = create(:user)
       @plant = create(:plant)
