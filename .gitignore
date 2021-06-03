@@ -16,3 +16,6 @@
 /config/application.yml
 # Ignore test coverage files from SimpleCov
 /coverage
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
