@@ -5,7 +5,7 @@ WORKDIR /harvest_helper
 COPY ./Gemfile /harvest_helper/Gemfile
 COPY ./Gemfile.lock /harvest_helper/Gemfile.lock
 
-RUN cd /harvest_helper && bundle install
+RUN cd /harvest_helper && bundle install --system
 ADD . /harvest_helper
 
 # Add a script to be executed every time the container starts.
