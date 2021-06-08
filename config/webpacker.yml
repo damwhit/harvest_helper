@@ -15,6 +15,10 @@ default: &default
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
 
+  extensions:
+    # ...
+    - .vue
+
 development:
   <<: *default
   compile: true

@@ -16,3 +16,7 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('hellooooo hi hi hi')
+
+import initPlantsApp from "../src/plants.js"
+
+initPlantsApp()
