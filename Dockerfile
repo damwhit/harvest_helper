@@ -2,7 +2,10 @@
 FROM ruby:2.6.3
 
 RUN curl https://deb.nodesource.com/setup_12.x | bash
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
+
 WORKDIR /harvest_helper
 COPY ./Gemfile /harvest_helper/Gemfile
 COPY ./Gemfile.lock /harvest_helper/Gemfile.lock

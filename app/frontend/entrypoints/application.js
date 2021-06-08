@@ -12,7 +12,14 @@ console.log('Vite ⚡️ Rails')
 //     <%= vite_javascript_tag 'application.jsx' %>
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
+import { createApp } from 'vue'
 
+import MyGarden from '@/components/MyGarden.vue'
+
+document.addEventListener('DOMContentLoaded', () => {
+  const app = createApp(MyGarden)
+  app.mount('#plants-app')
+});
 // Example: Load Rails libraries in Vite.
 //
 // import '@rails/ujs'
