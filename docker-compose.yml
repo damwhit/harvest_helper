@@ -1,5 +1,14 @@
 version: "3.9"
 services:
+  vite:
+    build: .
+    command: bash -c "/harvest_helper/bin/vite dev"
+    volumes:
+      - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - "3036:3036"
   db:
     image: postgres
     volumes:
@@ -11,7 +20,10 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: vite
     ports:
       - "3000:3000"
     depends_on:
+      - vite
       - db
