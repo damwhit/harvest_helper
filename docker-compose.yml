@@ -1,5 +1,12 @@
 version: "3.9"
 services:
+  webpacker:
+    build: .
+    command: bash -c "rm -rf /harvest_helper/public/packs; /harvest_helper/bin/webpack-dev-server"
+    volumes:
+      - .:/harvest_helper
+    ports:
+      - "3035:3035"
   db:
     image: postgres
     volumes:
@@ -14,4 +21,5 @@ services:
     ports:
       - "3000:3000"
     depends_on:
+      - webpacker
       - db

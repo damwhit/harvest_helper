@@ -20,7 +20,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'bootsnap'
 gem 'devise'
 gem 'cloudinary'
-gem 'webpacker', '~> 6.x'
+gem 'webpacker', '6.0.0.beta.7'
 
 group :development, :test do
   gem 'pry-rails'

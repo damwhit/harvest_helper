@@ -22,7 +22,6 @@ EXPOSE 3000
 
 # Configure the main process to run when running the image
 CMD ["rails", "server", "-b", "0.0.0.0"]
-RUN ./bin/webpack-dev-server
 
 
 # RUN RAILS_ENV=production bundle exec rake assets:precompile
