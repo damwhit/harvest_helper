@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import MyGarden from '@/components/MyGarden.vue'
+import MyGarden from '@/views/MyGarden.vue'
 
 const initMyGarden = () => {
   createApp(MyGarden).mount('#my-garden')
