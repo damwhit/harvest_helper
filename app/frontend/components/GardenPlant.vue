@@ -11,7 +11,7 @@
 
 <template>
   <li>
-    {{ plant.name }}
+    <a :href="'/plants/' + plant.id ">{{ plant.name }}</a>
   </li>
 </template>
 
