@@ -6,9 +6,6 @@
         required: true,
       }
     },
-    created() {
-      console.log(this.plant.image_url)
-    }
   }
 </script>
 

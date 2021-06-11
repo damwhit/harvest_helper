@@ -1,5 +1,5 @@
 <script>
-import GardenPlants from '@/components/GardenPlants.vue';
+import GardenPlants from './GardenPlants.vue';
 
 export default {
   components:  {

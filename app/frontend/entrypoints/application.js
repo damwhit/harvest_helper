@@ -12,14 +12,10 @@ console.log('Vite ⚡️ Rails')
 //     <%= vite_javascript_tag 'application.jsx' %>
 
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
-import { initMyGarden, initPlantDetails } from '@/main.js'
+import { initMyGarden } from '@/MyGarden/index.js'
 
 if (window.location.pathname === '/mygarden') {
   initMyGarden();
-} else if (window.location.pathname.includes('/plants/')) {
-  initPlantDetails();
-} else {
-  console.log('farewell vue!')
 }
 
 // Example: Load Rails libraries in Vite.
