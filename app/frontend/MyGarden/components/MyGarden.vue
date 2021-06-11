@@ -1,4 +1,5 @@
 <script>
+import { mapState, mapActions } from 'vuex';
 import GardenPlants from './GardenPlants.vue';
 
 export default {
@@ -8,16 +9,16 @@ export default {
 
   data() {
     return {
-      plants: [],
       currentUser: {},
     }
   },
-
+	computed: mapState(['plants']),
+	methods: mapActions(['setPlants']),
   created() {
     const page = document.querySelector('#my-garden');
     const { user, plants } = page.dataset;
     this.currentUser = JSON.parse(user);
-    this.plants = JSON.parse(plants);
+    this.setPlants(JSON.parse(plants));
   }
 }
 </script>
