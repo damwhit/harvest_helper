@@ -1,5 +1,14 @@
 version: "3.9"
 services:
+  storybook:
+    build: .
+    command: bash -c "yarn storybook"
+    volumes:
+      - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - "6006:6006"
   vite:
     build: .
     command: bash -c "/harvest_helper/bin/vite dev"
