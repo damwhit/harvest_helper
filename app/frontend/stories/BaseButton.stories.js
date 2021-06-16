@@ -1,8 +1,8 @@
-import MyButton from './Button.vue';
+import BaseButton from '../components/BaseButton.vue';
 
 export default {
-  title: 'Example/Button',
-  component: MyButton,
+  title: 'Example/BaseButton',
+  component: BaseButton,
   argTypes: {
     backgroundColor: { control: 'color' },
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
@@ -12,13 +12,13 @@ export default {
 
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { MyButton },
+  components: { BaseButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<BaseButton v-bind="args" />',
 });
 
 export const Primary = Template.bind({});
