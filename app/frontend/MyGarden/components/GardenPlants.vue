@@ -22,5 +22,8 @@ import GardenPlant from './GardenPlant.vue'
 </template>
 
 <style scoped>
-
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 </style>

@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="garden-container">
     <h4>{{ currentUser.name }}'s Garden</h4>
     <GardenPlants 
       :plants="plants"
@@ -33,8 +33,9 @@ export default {
 </template>
 
 <style scoped >
-  .container {
+  .garden-container {
     margin: 0 auto;
     max-width: 500px;
+    padding: 0 15px;
   }
 </style>
