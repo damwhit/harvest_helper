@@ -1,7 +1,7 @@
 import BaseButton from '../components/BaseButton.vue';
 
 export default {
-  title: 'Example/BaseButton',
+  title: 'Building Blocks/BaseButton',
   component: BaseButton,
   argTypes: {
     backgroundColor: { control: 'color' },
