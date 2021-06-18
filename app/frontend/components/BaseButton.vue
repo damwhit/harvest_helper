@@ -25,7 +25,6 @@ export default {
   emits: ['click'],
 
   setup(props, { emit }) {
-    props = reactive(props);
     return {
       classes: computed(() => ({
         'storybook-button': true,
@@ -60,12 +59,11 @@ export default {
   }
   .storybook-button--primary {
     color: white;
-    background-color: #BBC5E4;
+    background-color: #789A54;
   }
   .storybook-button--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    color: white;
+    background-color: #747d97;
   }
   .storybook-button--small {
     font-size: 12px;

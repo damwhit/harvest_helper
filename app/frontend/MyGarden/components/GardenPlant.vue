@@ -21,8 +21,11 @@ import BaseButton from '@/components/BaseButton.vue';
       <img :src="plant.image_url" :alt="'Image of ' + plant.name">
     </div>
     <div class="right">
-      <a :href="'/plants/' + plant.id ">{{ plant.name }}</a>
-      <BaseButton label="Remove" :primary="true" />
+      <h3>{{ plant.name }}</h3>
+      <div class="ctas">
+        <a :href="'plants/' + plant.id">view details</a>
+        <BaseButton size="small" label="remove" :primary="true" />
+      </div>
     </div>
   </li>
 </template>
@@ -30,26 +33,36 @@ import BaseButton from '@/components/BaseButton.vue';
 <style scoped>
   .plant {
     align-items: center;
-    border-bottom: 1px solid lightgray;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
     display: flex;
-    margin: 10px 0;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
   }
 
   .left {
-    width: 60%;;
+    width: 40%;;
   }
 
   .right {
-    width: 40%;
+    width: 60%;
   }
 
   img {
     border-radius: 5px;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
   }
 
-  a {
-    display: block;
-    margin-bottom: 15px;
+  h3 {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .ctas {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
   }
 </style>

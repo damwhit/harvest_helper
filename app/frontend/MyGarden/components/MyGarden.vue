@@ -25,7 +25,7 @@ export default {
 
 <template>
   <div class="garden-container">
-    <h4>{{ currentUser.name }}'s Garden</h4>
+    <h2>{{ currentUser.name }}'s Garden</h2>
     <GardenPlants 
       :plants="plants"
     />
@@ -34,8 +34,13 @@ export default {
 
 <style scoped >
   .garden-container {
+    color: #414a4c;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0 auto;
     max-width: 500px;
     padding: 0 15px;
+  }
+  h2 {
+    margin-bottom: 40px;
   }
 </style>
