@@ -6,18 +6,12 @@ export default {
   components:  {
     GardenPlants,
   },
-
-  data() {
-    return {
-      currentUser: {},
-    }
-  },
-	computed: mapState(['plants']),
-	methods: mapActions(['setPlants']),
+	computed: mapState(['plants', 'currentUser']),
+	methods: mapActions(['setPlants', 'setCurrentUser']),
   created() {
     const page = document.querySelector('#my-garden');
     const { user, plants } = page.dataset;
-    this.currentUser = JSON.parse(user);
+    this.setCurrentUser(JSON.parse(user));
     this.setPlants(JSON.parse(plants));
   }
 }

@@ -1,5 +1,7 @@
 class GardensController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :authenticate_user!, :only => [:destroy]
+  skip_before_action :verify_authenticity_token, :only => [:destroy]
   
   def show
     @plants = current_user.plants.order(name: :asc)
@@ -18,9 +20,9 @@ class GardensController < ApplicationController
   end
 
   def destroy
-    plant = current_user.plants.find(params[:plant_id])
-    current_user.plants.delete(params[:plant_id])
-    flash[:alert] = "#{ActionController::Base.helpers.link_to plant.name, plant_path(plant)} removed from garden."
-    redirect_to gardens_path
+    current_user = User.find(params[:user_id])
+    plant = Plant.find(params[:plant_id])
+    current_user.plants.delete(plant)
+    render json: plant
   end
 end
