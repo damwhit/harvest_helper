@@ -1,8 +1,8 @@
 <script>
   import { mapState, mapActions } from 'vuex';
-  import BaseButton from '@/components/BaseButton.vue';
-  import BaseLink from '@/components/BaseLink.vue';
-  import BaseThumbnail from '@/components/BaseThumbnail.vue';
+  import BaseButton from '../../components/BaseButton.vue';
+  import BaseLink from '../../components/BaseLink.vue';
+  import BaseThumbnail from '../../components/BaseThumbnail.vue';
 
   export default {
     components: { BaseButton, BaseLink, BaseThumbnail },
@@ -15,6 +15,7 @@
     computed: mapState(['plants', 'currentUser']),
     created() {
       const baseUrl = 'https://res.cloudinary.com/do6bw42am/image/upload/t_media_lib_thumb/v1537233955/';
+      console.log(this.plant.image_url)
       this.plant.image_url = `${baseUrl}${this.plant.image_url}`;
     },
     methods: {
@@ -61,6 +62,7 @@
     border-radius: 5px;
     display: flex;
     margin-bottom: 20px;
+    max-width: 450px;
     padding: 10px;
   }
 
