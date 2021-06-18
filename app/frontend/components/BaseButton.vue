@@ -27,10 +27,10 @@ export default {
   setup(props, { emit }) {
     return {
       classes: computed(() => ({
-        'storybook-button': true,
-        'storybook-button--primary': props.primary,
-        'storybook-button--secondary': !props.primary,
-        [`storybook-button--${props.size || 'medium'}`]: true,
+        'base-button': true,
+        'base-button--primary': props.primary,
+        'base-button--secondary': !props.primary,
+        [`base-button--${props.size || 'medium'}`]: true,
       })),
       style: computed(() => ({
         backgroundColor: props.backgroundColor,
@@ -48,7 +48,7 @@ export default {
 </template>
 
 <style scoped>
-  .storybook-button {
+  .base-button {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     border: 0;
@@ -57,23 +57,23 @@ export default {
     display: inline-block;
     line-height: 1;
   }
-  .storybook-button--primary {
+  .base-button--primary {
     color: white;
     background-color: #789A54;
   }
-  .storybook-button--secondary {
+  .base-button--secondary {
     color: white;
     background-color: #747d97;
   }
-  .storybook-button--small {
+  .base-button--small {
     font-size: 12px;
     padding: 10px 16px;
   }
-  .storybook-button--medium {
+  .base-button--medium {
     font-size: 14px;
     padding: 11px 20px;
   }
-  .storybook-button--large {
+  .base-button--large {
     font-size: 16px;
     padding: 12px 24px;
   }

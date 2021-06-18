@@ -1,11 +1,11 @@
 <script>
   export default {
     props: {
-      href: {
+      src: {
         type: String,
         required: true,
       },
-      text: {
+      altText: {
         type: String,
         required: true,
       },
@@ -14,12 +14,14 @@
 </script>
 
 <template>
-  <a class="base-link" :href="href">{{ text }}</a>
+  <img :src="src" :alt="altText">
 </template>
 
 <style scoped>
-  .base-link {
-    font-size: 16px;
-    font-weight: 700;
+  img {
+    border-radius: 5px;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
   }
 </style>

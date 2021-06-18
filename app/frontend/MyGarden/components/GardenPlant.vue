@@ -1,7 +1,10 @@
 <script>
-import BaseButton from '@/components/BaseButton.vue';
+  import BaseButton from '@/components/BaseButton.vue';
+  import BaseLink from '@/components/BaseLink.vue';
+  import BaseThumbnail from '@/components/BaseThumbnail.vue';
+
   export default {
-    components: { BaseButton },
+    components: { BaseButton, BaseLink, BaseThumbnail },
     props: {
       plant: {
         type: Object,
@@ -18,12 +21,12 @@ import BaseButton from '@/components/BaseButton.vue';
 <template>
   <li class="plant">
     <div class="left">
-      <img :src="plant.image_url" :alt="'Image of ' + plant.name">
+      <BaseThumbnail :src="plant.image_url" :altText="'Image of ' + plant.name" />
     </div>
     <div class="right">
       <h3>{{ plant.name }}</h3>
-      <div class="ctas">
-        <a :href="'plants/' + plant.id">view details</a>
+      <div class="actions">
+        <BaseLink :href="'/plants/' + plant.id" text="view details" />
         <BaseButton size="small" label="remove" :primary="true" />
       </div>
     </div>
@@ -48,19 +51,12 @@ import BaseButton from '@/components/BaseButton.vue';
     width: 60%;
   }
 
-  img {
-    border-radius: 5px;
-    height: 100px;
-    object-fit: cover;
-    width: 100px;
-  }
-
   h3 {
     margin-bottom: 20px;
     margin-top: 0;
   }
 
-  .ctas {
+  .actions {
     align-items: baseline;
     display: flex;
     justify-content: space-between;
