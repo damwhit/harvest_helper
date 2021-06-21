@@ -25,7 +25,7 @@
           user_id: this.currentUser.id,
           plant_id: this.plant.id,
         }
-        const response = await fetch('http://localhost:3000/mygarden', {
+        const response = await fetch('/mygarden', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
