@@ -16,8 +16,8 @@ const Template = (args) => ({
   template: '<GardenPlant v-bind="args" />',
 });
 
-export const Removable = Template.bind({});
-Removable.args = {
+export const Default = Template.bind({});
+Default.args = {
 
   plant: {
     id: 13,

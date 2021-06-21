@@ -57,6 +57,9 @@
 
 <style scoped>
   .plant {
+    color: #414a4c;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
     align-items: center;
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -75,6 +78,8 @@
   }
 
   h3 {
+    font-size: 24px;
+    line-height: 1.1;
     margin-bottom: 20px;
     margin-top: 0;
   }
