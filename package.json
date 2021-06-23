@@ -9,6 +9,7 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.1.1",
     "@zeplin/cli": "1.1.12",
+    "@zeplin/cli-connect-storybook-plugin": "^0.5.4",
     "babel-loader": "^8.2.2",
     "storybook-addon-designs": "^6.0.0",
     "storybook-zeplin": "^1.4.0",

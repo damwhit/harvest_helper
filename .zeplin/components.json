@@ -2,6 +2,12 @@
   "plugins": [
     {
       "name": "zeplin-cli-connect-plugin-vue"
+    },
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "https://damwhit.github.io/harvest_helper"
+      }
     }
   ],
   "styleguides": [
@@ -9,7 +15,7 @@
   ],
   "components": [
     {
-      "path": "app/frontend/stories/BaseButton.stories.js",
+      "path": "app/frontend/components/BaseButton.vue",
       "zeplinIds": [
         "5d4b1a6af4255751f3ae3aa8"
       ]
