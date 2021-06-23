@@ -148,7 +148,7 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.0.1)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     msgpack (1.2.4)
     multi_json (1.13.1)
@@ -156,7 +156,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (5.3.0.346)
     nio4r (2.3.1)
-    nokogiri (1.11.1)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
