@@ -1,8 +1,10 @@
 import GardenPlants from '../MyGarden/components/GardenPlants.vue';
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Components/GardenPlants',
   component: GardenPlants,
+  decorators: [withDesign],
 };
 
 const Template = (args) => ({
@@ -36,6 +38,13 @@ Default.args = {
     },
   ],
 };
+
+Default.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/DMN9Qj2DLzqxpm3UjAb5hK/Mocks_v1',
+  },
+}
 
 export const Empty = Template.bind({});
 Empty.args = {
