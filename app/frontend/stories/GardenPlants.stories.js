@@ -44,6 +44,16 @@ Default.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/DMN9Qj2DLzqxpm3UjAb5hK/Mocks_v1',
   },
+  zeplinLink: [
+    {
+      name: "Desktop",
+      link: "https://app.zeplin.io/project/5d4873c7ff6f4a134f9b7fd8/screen/5d680a880357eb490e012a0a",
+    },
+    {
+      name: "Mobile",
+      link: "https://app.zeplin.io/project/5d4873c7ff6f4a134f9b7fd8/screen/5d680972f828bf7299f81ce5",
+    },
+  ],
 }
 
 export const Empty = Template.bind({});
