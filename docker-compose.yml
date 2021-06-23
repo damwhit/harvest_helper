@@ -1,17 +1,40 @@
 version: "3.9"
 services:
+  storybook:
+    build: .
+    command: bash -c "yarn storybook"
+    volumes:
+      - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - "6006:6006"
+  vite:
+    build: .
+    command: bash -c "/harvest_helper/bin/vite dev"
+    volumes:
+      - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - "3036:3036"
   db:
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+    ports: 
+      - "5432:5432"
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/harvest_helper
+    environment: 
+      VITE_RUBY_HOST: vite
     ports:
       - "3000:3000"
     depends_on:
+      - vite
       - db

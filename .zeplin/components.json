@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    {
+      "name": "zeplin-cli-connect-plugin-vue"
+    }
+  ],
+  "styleguides": [
+    "5d4b197a2dba3f9bc18bbfb8"
+  ],
+  "components": [
+    {
+      "path": "app/frontend/stories/BaseButton.stories.js",
+      "zeplinIds": [
+        "5d4b1a6af4255751f3ae3aa8"
+      ]
+    }
+  ],
+  "github": {
+    "repository": "damwhit/harvest_helper"
+  }
+}

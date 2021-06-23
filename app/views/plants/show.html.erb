@@ -2,7 +2,7 @@
   <h1 class="plant-text"> <%= @plant.name %> </h1>
   <p class="plant-text"> <%= @plant.description %> </p>
   <%= cl_image_tag(@plant.image_url, :class=>'plant-image', :height=>300, :fetch_format=>:auto, :crop=>"scale") %>
-  
+  <br>
   <%= button_to "add to my garden", gardens_path, params: {plant_id: @plant.id}, class: "btn btn-primary button" %><br>
   <table class="table table-bordered">
     <tr>

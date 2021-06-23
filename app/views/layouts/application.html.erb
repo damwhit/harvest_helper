@@ -5,14 +5,8 @@
   <title>HarvestHelper</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <%= vite_client_tag %>
   <meta name="viewport" content="width=device-width, initial-scale=1"></head>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2192410362396071",
-      enable_page_level_ads: true
-    });
-  </script>
 <body>
   <%= render 'layouts/navbar' %>
   <% flash.each do |type, message| %>
@@ -20,5 +14,6 @@
   <% end %>
   <%= yield %>
   <%= javascript_include_tag 'application' %>
+  <%= vite_javascript_tag 'application' %>
 </body>
 </html>

@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/storybook-deployer": "^2.8.10",
+    "@storybook/vue3": "^6.2.9",
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.1.1",
+    "@zeplin/cli": "1.1.12",
+    "babel-loader": "^8.2.2",
+    "storybook-addon-designs": "^6.0.0",
+    "storybook-zeplin": "^1.4.0",
+    "vite": "^2.3.7",
+    "vite-plugin-ruby": "^2.0.4",
+    "vue-loader": "^16.2.0",
+    "zeplin-cli-connect-plugin-vue": "1.1.0"
+  },
+  "dependencies": {
+    "vue": "^3.1.1",
+    "vuex": "^4.0.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "zeplin-connect": "zeplin connect",
+    "zeplin-connect-dev-mode": "zeplin connect --dev"
+  }
+}
