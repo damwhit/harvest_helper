@@ -38,3 +38,15 @@ services:
     depends_on:
       - vite
       - db
+  cypress:
+    # the Docker image to use from https://github.com/cypress-io/cypress-docker-images
+    image: "cypress/included:3.2.0"
+    depends_on:
+      - web
+    environment:
+      # pass base url to test pointing at the web application
+      - CYPRESS_baseUrl=http://web:3000
+    # share the current folder as volume to avoid copying
+    working_dir: /e2e
+    volumes:
+      - ./e2e:/e2e
