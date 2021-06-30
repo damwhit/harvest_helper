@@ -41,7 +41,7 @@
 </script>
 
 <template>
-  <li class="plant">
+  <li class="plant bg-gray-300">
     <div class="left">
       <BaseThumbnail :src="plant.image_url" :altText="'Image of ' + plant.name" />
     </div>
