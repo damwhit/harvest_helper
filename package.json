@@ -14,7 +14,7 @@
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "postcss": "^8.3.5",
-    "storybook-addon-designs": "^6.0.0",
+    "storybook-addon-designs": "^6.0.1",
     "storybook-zeplin": "^1.4.0",
     "tailwindcss": "^2.2.4",
     "vite": "^2.3.7",

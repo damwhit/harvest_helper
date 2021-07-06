@@ -3,6 +3,10 @@ module.exports = {
     './app/frontend/**/*.vue',
     './app/frontend/**/*.js', // need to reference javascript too
   ],
+  corePlugins: {
+    container: false,
+    preflight: false,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

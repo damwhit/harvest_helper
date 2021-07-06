@@ -14,7 +14,7 @@ import BaseLink from '../../components/BaseLink.vue'
 </script>
 
 <template>
-  <ul v-if="plants.length > 0">
+  <ul v-if="plants.length > 0" class="space-y-12">
     <GardenPlant
       :plant="plant"
       v-for="plant in plants"

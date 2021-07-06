@@ -41,52 +41,16 @@
 </script>
 
 <template>
-  <li class="plant bg-gray-300">
-    <div class="left">
+  <li class="flex py-8 px-8 width-full bg-white rounded-xl shadow-md space-x-12">
+    <div>
       <BaseThumbnail :src="plant.image_url" :altText="'Image of ' + plant.name" />
     </div>
-    <div class="right">
+    <div>
       <h3>{{ plant.name }}</h3>
-      <div class="actions">
+      <div class="flex space-x-16 items-center">
         <BaseLink :href="'/plants/' + plant.id" text="view details" />
         <BaseButton @click="removeFromGarden" size="small" label="remove" />
       </div>
     </div>
   </li>
 </template>
-
-<style scoped>
-  .plant {
-    color: #414a4c;
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    align-items: center;
-    border: 0.5px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    margin-bottom: 20px;
-    max-width: 450px;
-    padding: 10px;
-  }
-
-  .left {
-    width: 40%;;
-  }
-
-  .right {
-    width: 60%;
-  }
-
-  h3 {
-    font-size: 24px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    margin-top: 0;
-  }
-
-  .actions {
-    align-items: baseline;
-    display: flex;
-    justify-content: space-between;
-  }
-</style>
