@@ -49,32 +49,21 @@ export default {
 
 <style scoped>
   .base-button {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    border: 0;
-    border-radius: 3em;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1;
+    @apply text-white font-semibold rounded-xl shadow-md;
   }
   .base-button--primary {
-    color: white;
-    background-color: #789A54;
+    @apply bg-green-500 hover:bg-green-700;
   }
   .base-button--secondary {
-    color: white;
-    background-color: #747d97;
+    @apply bg-purple-400 hover:bg-purple-500;
   }
   .base-button--small {
-    font-size: 12px;
-    padding: 10px 16px;
+    @apply py-1.5 px-2.5 text-base;
   }
   .base-button--medium {
-    font-size: 14px;
-    padding: 11px 20px;
+    @apply py-2 px-3 text-lg;
   }
   .base-button--large {
-    font-size: 16px;
-    padding: 12px 24px;
+    @apply py-2.5 px-3.5 text-xl;
   }
 </style>
